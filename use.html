@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my page</title>
+        <style>
+           body {
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+
+        .container {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+           padding: 0px;
+           width: 300px;
+           height: 50px;
+            text-align: center;
+        }
+
+        .login-box h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .login-box label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .login-box input {
+            : 100%;width
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background: #0056b3;
+        }
+
+
+        </style>
+    </head>
+    <body>
+            <center><h1>WELCOME TO ABC</h1></center>
+            <div class="container" id="loginform">
+            <lable for="">USER NAME</lable>
+            <input type="text" class="form-control" id="Name" placeholder="Enter Name"><br>
+            <lable for="">PASSWORD</lable>
+            <input type="password" class="form-control" id="password" placeholder="password"><br>
+            <center><button type="login" onclick="myLogin()">login</button></center> 
+            </div>   
+        </div>
+        <div id="welcomepage" style="display:none;">
+            <center><h1>WELCOME</h1></center>
+        </div>
+    
+        <script>
+            function myLogin(){
+                let username=document.getElementById("Name").value;
+                let password=document.getElementById("password").value;
+                if (username==="vaishnavi"&&password==="1234"){
+                    alert ("Login Sucessfully");
+                     document.getElementById("loginform").style.display = 'none';
+                     document.getElementById("welcomepage").style.display = 'block';
+                }
+                else{
+                    alert("Inncorrect Password");
+                }
+                console.log("Username: " + username + "\nPassword: " + password);
+            }
+        </script>
+    </body>
+</html>

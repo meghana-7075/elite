@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color: lavender;}
+.container{
+    width: 400px;
+            margin: 50px auto;
+            background-color:violet;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);}
+           label{ margin-top: 15px;
+            font-weight: bold;
+            }
+            select {
+            width: 30%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px;
+            border-radius: 5px;
+        }
+        button {
+            width: 30%;
+            padding: 10px;
+            margin-top: 30px;
+            background-color:#800080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+
+    </style>
+    
+</head>
+<body>
+    <div class="container" id="loginpage">
+
+        <p><h1>Login page </h1></p>
+        
+            <label for="username"> USERNAME </label>
+            <input type="text" class="form-control" id="Name" placeholder="enter username"><br>
+        <label for="password"> PASSWORD</label>
+        <input type="password" class="form-control" id="password" placeholder="enter password"><br>
+        <center><button type="button" onclick="login()">login</button><br></center>
+    </div>
+      
+    <div id="homePage" style="display:none";>
+        <h1>Welcome to the Home Page!</h1>
+        <label for="name">NAME</label>
+        <input type="text" place holder="username"><br>
+        <label for="gender">GENDER</label><br>
+        <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+        <label class="form-check-label" for="male">Male</label>
+    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+    <label class="form-check-label" for="female">Female</label><br>
+    <label for="dob">Date of Birth</label>
+     <input type="date" class="form-control" id="dob"><br>
+            <label for="subjects">Subjects</label>
+            <select class="form-select" id="subjects">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="maths">Maths</option>
+                <option value="social">Social</option>
+                <option value="DS">DS</option>
+            </select><br>
+            <button type="button" onclick="login()">Submit</button>
+        
+
+
+      </div>
+
+    <script>
+        
+        function login(){
+            let username=document.getElementById("Name").value;
+                let password=document.getElementById("password").value;
+                console.log("Username: " + username + "\nPassword: " + password);
+                if (username==="meghana" && password==="meghana"){
+                    alert("correct password");
+                    document.getElementById("loginpage").style.display = "none";
+                     document.getElementById("homePage").style.display="block";
+                    }
+                    else{
+                        alert("incorrect password");
+                    }
+        }
+
+    </script>
+
+
+    
+</body>
+</html>
